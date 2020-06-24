@@ -24,13 +24,13 @@ https://www.consul.io/docs/agent/http.html
         1. Add 1st Servers as a Leader
         consul agent -server -bootstrap -data-dir /tmp/consul --bind 192.168.0.1 - -node server1 &
 
-        2. Add 2nd Server as slave
+        2. Add 2nd Server as minion
         consul agent -server -data-dir /tmp/consul --node server2 --bind 192.168.0. 2 &
 
-        3.  Add 3rd Server as slave
+        3.  Add 3rd Server as minion
         consul agent -server -data-dir /tmp/consul --node server3 --bind 192.168.0. 3 &
 
-        4. Joing Servers nodes in the cluster as slaves
+        4. Join Servers nodes in the cluster as minions
 
         consul join 192.168.0.2 192.168.0.3
 
